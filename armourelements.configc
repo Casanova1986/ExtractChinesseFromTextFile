@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project Name="" Version="">
+    <!-- 金=1，木=2，水=3，火=4，土=5 -->
+    <!--Value=自身五行，Forbear=相克五行，Assist=相生五行-->
+    <!--金克木(1克2)，木克土（2克3），土克水（3克4），水克火（4克5），火克金（5克1）-->
+    <!--金生水(1生4)，木生火（2生5），土生金（3生1），水生木（4生2），火生土（5生3）-->
+    <ArmourElements>
+        <Element Value="1" Forbear="2" Assist="4"/>
+        <Element Value="2" Forbear="5" Assist="5"/>
+        <Element Value="5" Forbear="3" Assist="1"/>
+        <Element Value="3" Forbear="4" Assist="2"/>
+        <Element Value="4" Forbear="1" Assist="3"/>
+    </ArmourElements>
+    <ElementsModulus>
+        <Level Value="40">
+            <Modulus Element="2" Forbear="10" Assist="0"/>
+            <Modulus Element="3" Forbear="20" Assist="0"/>
+            <Modulus Element="4" Forbear="30" Assist="0"/>
+            <Modulus Element="5" Forbear="40" Assist="0"/>
+            <Modulus Element="6" Forbear="60" Assist="0"/>
+        </Level>
+        <Level Value="45">
+            <Modulus Element="2" Forbear="20" Assist="0"/>
+            <Modulus Element="3" Forbear="30" Assist="0"/>
+            <Modulus Element="4" Forbear="50" Assist="0"/>
+            <Modulus Element="5" Forbear="60" Assist="0"/>
+            <Modulus Element="6" Forbear="90" Assist="0"/>
+        </Level>
+        <Level Value="50">
+            <Modulus Element="2" Forbear="30" Assist="0"/>
+            <Modulus Element="3" Forbear="50" Assist="0"/>
+            <Modulus Element="4" Forbear="80" Assist="0"/>
+            <Modulus Element="5" Forbear="100" Assist="0"/>
+            <Modulus Element="6" Forbear="150" Assist="0"/>
+        </Level>
+        <Level Value="55">
+            <Modulus Element="2" Forbear="40" Assist="0"/>
+            <Modulus Element="3" Forbear="70" Assist="0"/>
+            <Modulus Element="4" Forbear="100" Assist="0"/>
+            <Modulus Element="5" Forbear="140" Assist="0"/>
+            <Modulus Element="6" Forbear="200" Assist="0"/>
+        </Level>
+    </ElementsModulus>
+
+    <!--MaxLevel = 最大提纯等级-->
+    <ElementAttribute MaxLevel="5">
+        <!--装备等级-->
+        <Equip Level="55">
+            <ExtendAttack>
+                <!--Value = 提纯的等级 Attack = 附加的攻击-->
+                <Level Value="0" Attack="0"/>
+                <Level Value="1" Attack="10"/>
+                <Level Value="2" Attack="25"/>
+                <Level Value="3" Attack="50"/>
+                <Level Value="4" Attack="70"/>
+                <Level Value="5" Attack="100"/>
+            </ExtendAttack>
+            <!--隐藏属性AttriCount = 附加的属性个数(可以超过3个) MinLevel = 最小激活隐藏属性的提纯等级 -->
+            <HideAttribute AttriCount="3" MinLevel="3">
+                <Level Value="3">
+                    <Attribute ID ="1628"/>
+                    <Attribute ID ="1629"/>
+                    <Attribute ID ="1630"/>
+                </Level>
+                <!--6个五行相同, 并且提纯都是4-->
+                <Level Value="4">
+                    <Attribute ID ="1391"/>
+                    <Attribute ID ="1392"/>
+                    <Attribute ID ="1393"/>
+                </Level>
+                <!--6个五行相同, 并且提纯都是5-->
+                <Level Value="5">
+                    <Attribute ID ="1394"/>
+                    <Attribute ID ="1395"/>
+                    <Attribute ID ="1396"/>
+                </Level>
+            </HideAttribute>
+            <!--基础附加的属性 MaxElementCount = 五行元素最大个数( 必须是 6 ) AttriCount = 附加的属性个数( 可以超过3 )-->
+            <BaseAttribute MaxElementCount="6" AttriCount="3">
+                <!--基础附加属性-->
+                <Element Value="1">
+                    <!-- ( 金 ) -->
+                    <Count Value="2"><!-- Count Value = 元素的个数-->
+                        <Attribute ID ="1397"/>
+                        <Attribute ID ="1398"/>
+                        <Attribute ID ="1399"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1400"/>
+                        <Attribute ID ="1401"/>
+                        <Attribute ID ="1402"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1403"/>
+                        <Attribute ID ="1404"/>
+                        <Attribute ID ="1405"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1406"/>
+                        <Attribute ID ="1407"/>
+                        <Attribute ID ="1408"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1409"/>
+                        <Attribute ID ="1410"/>
+                        <Attribute ID ="1411"/>
+                    </Count>
+                </Element>
+                <Element Value="2">
+                    <!-- ( 木 )-->
+                    <Count Value="2">
+                        <Attribute ID ="1427"/>
+                        <Attribute ID ="1428"/>
+                        <Attribute ID ="1429"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1430"/>
+                        <Attribute ID ="1431"/>
+                        <Attribute ID ="1432"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1433"/>
+                        <Attribute ID ="1434"/>
+                        <Attribute ID ="1435"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1436"/>
+                        <Attribute ID ="1437"/>
+                        <Attribute ID ="1438"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1439"/>
+                        <Attribute ID ="1440"/>
+                        <Attribute ID ="1441"/>
+                    </Count>
+                </Element>
+                <Element Value="3">
+                    <!-- ( 水 )-->
+                    <Count Value="2">
+                        <Attribute ID ="1412"/>
+                        <Attribute ID ="1413"/>
+                        <Attribute ID ="1414"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1415"/>
+                        <Attribute ID ="1416"/>
+                        <Attribute ID ="1417"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1418"/>
+                        <Attribute ID ="1419"/>
+                        <Attribute ID ="1420"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1421"/>
+                        <Attribute ID ="1422"/>
+                        <Attribute ID ="1423"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1424"/>
+                        <Attribute ID ="1425"/>
+                        <Attribute ID ="1426"/>
+                    </Count>
+                </Element>
+                <Element Value="4">
+                    <!-- ( 火 )-->
+                    <Count Value="2">
+                        <Attribute ID ="1442"/>
+                        <Attribute ID ="1443"/>
+                        <Attribute ID ="1444"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1445"/>
+                        <Attribute ID ="1446"/>
+                        <Attribute ID ="1447"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1448"/>
+                        <Attribute ID ="1449"/>
+                        <Attribute ID ="1450"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1451"/>
+                        <Attribute ID ="1452"/>
+                        <Attribute ID ="1453"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1454"/>
+                        <Attribute ID ="1455"/>
+                        <Attribute ID ="1456"/>
+                    </Count>
+                </Element>
+                <Element Value="5">
+                    <!-- ( 土 )-->
+                    <Count Value="2">
+                        <Attribute ID ="1457"/>
+                        <Attribute ID ="1458"/>
+                        <Attribute ID ="1459"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1460"/>
+                        <Attribute ID ="1461"/>
+                        <Attribute ID ="1462"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1463"/>
+                        <Attribute ID ="1464"/>
+                        <Attribute ID ="1465"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1466"/>
+                        <Attribute ID ="1467"/>
+                        <Attribute ID ="1468"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1469"/>
+                        <Attribute ID ="1470"/>
+                        <Attribute ID ="1471"/>
+                    </Count>
+                </Element>
+            </BaseAttribute>
+        </Equip>
+        <!--装备等级-->
+        <Equip Level="50">
+            <ExtendAttack>
+                <!--Value = 提纯的等级 Attack = 附加的攻击-->
+                <Level Value="0" Attack="0"/>
+                <Level Value="1" Attack="10"/>
+                <Level Value="2" Attack="25"/>
+                <Level Value="3" Attack="50"/>
+                <Level Value="4" Attack="70"/>
+                <Level Value="5" Attack="100"/>
+            </ExtendAttack>
+            <!--隐藏属性AttriCount = 附加的属性个数(可以超过3个) MinLevel = 最小激活隐藏属性的提纯等级 -->
+            <HideAttribute AttriCount="3" MinLevel="3">
+                <Level Value="3">
+                    <Attribute ID ="1706"/>
+                    <Attribute ID ="1707"/>
+                    <Attribute ID ="1708"/>
+                </Level>
+                <!--6个五行相同, 并且提纯都是4-->
+                <Level Value="4">
+                    <Attribute ID ="1709"/>
+                    <Attribute ID ="1710"/>
+                    <Attribute ID ="1711"/>
+                </Level>
+                <!--6个五行相同, 并且提纯都是5-->
+                <Level Value="5">
+                    <Attribute ID ="1712"/>
+                    <Attribute ID ="1713"/>
+                    <Attribute ID ="1714"/>
+                </Level>
+            </HideAttribute>
+            <!--基础附加的属性 MaxElementCount = 五行元素最大个数( 必须是 6 ) AttriCount = 附加的属性个数( 可以超过3 )-->
+            <BaseAttribute MaxElementCount="6" AttriCount="3">
+                <!--基础附加属性-->
+                <Element Value="1">
+                    <!-- ( 金 ) -->
+                    <Count Value="2"><!-- Count Value = 元素的个数-->
+                        <Attribute ID ="1397"/>
+                        <Attribute ID ="1398"/>
+                        <Attribute ID ="1399"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1400"/>
+                        <Attribute ID ="1401"/>
+                        <Attribute ID ="1402"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1403"/>
+                        <Attribute ID ="1404"/>
+                        <Attribute ID ="1405"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1406"/>
+                        <Attribute ID ="1407"/>
+                        <Attribute ID ="1408"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1409"/>
+                        <Attribute ID ="1410"/>
+                        <Attribute ID ="1411"/>
+                    </Count>
+                </Element>
+                <Element Value="2">
+                    <!-- ( 木 )-->
+                    <Count Value="2">
+                        <Attribute ID ="1427"/>
+                        <Attribute ID ="1428"/>
+                        <Attribute ID ="1429"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1430"/>
+                        <Attribute ID ="1431"/>
+                        <Attribute ID ="1432"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1433"/>
+                        <Attribute ID ="1434"/>
+                        <Attribute ID ="1435"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1436"/>
+                        <Attribute ID ="1437"/>
+                        <Attribute ID ="1438"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1439"/>
+                        <Attribute ID ="1440"/>
+                        <Attribute ID ="1441"/>
+                    </Count>
+                </Element>
+                <Element Value="3">
+                    <!-- ( 水 )-->
+                    <Count Value="2">
+                        <Attribute ID ="1412"/>
+                        <Attribute ID ="1413"/>
+                        <Attribute ID ="1414"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1415"/>
+                        <Attribute ID ="1416"/>
+                        <Attribute ID ="1417"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1418"/>
+                        <Attribute ID ="1419"/>
+                        <Attribute ID ="1420"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1421"/>
+                        <Attribute ID ="1422"/>
+                        <Attribute ID ="1423"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1424"/>
+                        <Attribute ID ="1425"/>
+                        <Attribute ID ="1426"/>
+                    </Count>
+                </Element>
+                <Element Value="4">
+                    <!-- ( 火 )-->
+                    <Count Value="2">
+                        <Attribute ID ="1442"/>
+                        <Attribute ID ="1443"/>
+                        <Attribute ID ="1444"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1445"/>
+                        <Attribute ID ="1446"/>
+                        <Attribute ID ="1447"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1448"/>
+                        <Attribute ID ="1449"/>
+                        <Attribute ID ="1450"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1451"/>
+                        <Attribute ID ="1452"/>
+                        <Attribute ID ="1453"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1454"/>
+                        <Attribute ID ="1455"/>
+                        <Attribute ID ="1456"/>
+                    </Count>
+                </Element>
+                <Element Value="5">
+                    <!-- ( 土 )-->
+                    <Count Value="2">
+                        <Attribute ID ="1457"/>
+                        <Attribute ID ="1458"/>
+                        <Attribute ID ="1459"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1460"/>
+                        <Attribute ID ="1461"/>
+                        <Attribute ID ="1462"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1463"/>
+                        <Attribute ID ="1464"/>
+                        <Attribute ID ="1465"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1466"/>
+                        <Attribute ID ="1467"/>
+                        <Attribute ID ="1468"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1469"/>
+                        <Attribute ID ="1470"/>
+                        <Attribute ID ="1471"/>
+                    </Count>
+                </Element>
+            </BaseAttribute>
+        </Equip>
+        <!--装备等级-->
+        <Equip Level="45">
+            <ExtendAttack>
+                <!--Value = 提纯的等级 Attack = 附加的攻击-->
+                <Level Value="0" Attack="0"/>
+                <Level Value="1" Attack="0"/>
+                <Level Value="2" Attack="0"/>
+                <Level Value="3" Attack="0"/>
+                <Level Value="4" Attack="0"/>
+                <Level Value="5" Attack="0"/>
+            </ExtendAttack>
+            <HideAttribute AttriCount="3" MinLevel="3">
+                <Level Value="3">
+                    <Attribute ID ="0"/>
+                    <Attribute ID ="0"/>
+                    <Attribute ID ="0"/>
+                </Level>
+                <!--6个五行相同, 并且提纯都是4-->
+                <Level Value="4">
+                    <Attribute ID ="0"/>
+                    <Attribute ID ="0"/>
+                    <Attribute ID ="0"/>
+                </Level>
+                <!--6个五行相同, 并且提纯都是5-->
+                <Level Value="5">
+                    <Attribute ID ="0"/>
+                    <Attribute ID ="0"/>
+                    <Attribute ID ="0"/>
+                </Level>
+            </HideAttribute>
+            <!--基础附加的属性 MaxElementCount = 五行元素最大个数( 必须是 6 ) AttriCount = 附加的属性个数( 可以超过3 )-->
+            <BaseAttribute MaxElementCount="6" AttriCount="3">
+                <!--基础附加属性-->
+                <Element Value="1">
+                    <!-- ( 金 ) -->
+                    <Count Value="2"><!-- Count Value = 元素的个数-->
+                        <Attribute ID ="1631"/>
+                        <Attribute ID ="1632"/>
+                        <Attribute ID ="1633"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1634"/>
+                        <Attribute ID ="1635"/>
+                        <Attribute ID ="1636"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1637"/>
+                        <Attribute ID ="1638"/>
+                        <Attribute ID ="1639"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1640"/>
+                        <Attribute ID ="1641"/>
+                        <Attribute ID ="1642"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1643"/>
+                        <Attribute ID ="1644"/>
+                        <Attribute ID ="1645"/>
+                    </Count>
+                </Element>
+                <Element Value="2">
+                    <!-- ( 木 )-->
+                    <Count Value="2">
+                        <Attribute ID ="1661"/>
+                        <Attribute ID ="1662"/>
+                        <Attribute ID ="1663"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1664"/>
+                        <Attribute ID ="1665"/>
+                        <Attribute ID ="1666"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1667"/>
+                        <Attribute ID ="1668"/>
+                        <Attribute ID ="1669"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1670"/>
+                        <Attribute ID ="1671"/>
+                        <Attribute ID ="1672"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1673"/>
+                        <Attribute ID ="1674"/>
+                        <Attribute ID ="1675"/>
+                    </Count>
+                </Element>
+                <Element Value="3">
+                    <!-- ( 水 )-->
+                    <Count Value="2">
+                        <Attribute ID ="1646"/>
+                        <Attribute ID ="1647"/>
+                        <Attribute ID ="1648"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1649"/>
+                        <Attribute ID ="1650"/>
+                        <Attribute ID ="1651"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1652"/>
+                        <Attribute ID ="1653"/>
+                        <Attribute ID ="1654"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1655"/>
+                        <Attribute ID ="1656"/>
+                        <Attribute ID ="1657"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1658"/>
+                        <Attribute ID ="1659"/>
+                        <Attribute ID ="1660"/>
+                    </Count>
+                </Element>
+                <Element Value="4">
+                    <!-- ( 火 )-->
+                    <Count Value="2">
+                        <Attribute ID ="1676"/>
+                        <Attribute ID ="1677"/>
+                        <Attribute ID ="1678"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1679"/>
+                        <Attribute ID ="1680"/>
+                        <Attribute ID ="1681"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1682"/>
+                        <Attribute ID ="1683"/>
+                        <Attribute ID ="1684"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1685"/>
+                        <Attribute ID ="1686"/>
+                        <Attribute ID ="1687"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1688"/>
+                        <Attribute ID ="1689"/>
+                        <Attribute ID ="1690"/>
+                    </Count>
+                </Element>
+                <Element Value="5">
+                    <!-- ( 土 )-->
+                    <Count Value="2">
+                        <Attribute ID ="1691"/>
+                        <Attribute ID ="1692"/>
+                        <Attribute ID ="1693"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1694"/>
+                        <Attribute ID ="1695"/>
+                        <Attribute ID ="1696"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1697"/>
+                        <Attribute ID ="1698"/>
+                        <Attribute ID ="1699"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1700"/>
+                        <Attribute ID ="1701"/>
+                        <Attribute ID ="1702"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1703"/>
+                        <Attribute ID ="1704"/>
+                        <Attribute ID ="1705"/>
+                    </Count>
+                </Element>
+            </BaseAttribute>
+        </Equip>
+        <!--装备等级-->
+        <Equip Level="40">
+            <ExtendAttack>
+                <!--Value = 提纯的等级 Attack = 附加的攻击-->
+                <Level Value="0" Attack="0"/>
+                <Level Value="1" Attack="0"/>
+                <Level Value="2" Attack="0"/>
+                <Level Value="3" Attack="0"/>
+                <Level Value="4" Attack="0"/>
+                <Level Value="5" Attack="0"/>
+            </ExtendAttack>
+            <HideAttribute AttriCount="3" MinLevel="3">
+                <Level Value="3">
+                    <Attribute ID ="0"/>
+                    <Attribute ID ="0"/>
+                    <Attribute ID ="0"/>
+                </Level>
+                <!--6个五行相同, 并且提纯都是4-->
+                <Level Value="4">
+                    <Attribute ID ="0"/>
+                    <Attribute ID ="0"/>
+                    <Attribute ID ="0"/>
+                </Level>
+                <!--6个五行相同, 并且提纯都是5-->
+                <Level Value="5">
+                    <Attribute ID ="0"/>
+                    <Attribute ID ="0"/>
+                    <Attribute ID ="0"/>
+                </Level>
+            </HideAttribute>
+            <!--基础附加的属性 MaxElementCount = 五行元素最大个数( 必须是 6 ) AttriCount = 附加的属性个数( 可以超过3 )-->
+            <BaseAttribute MaxElementCount="6" AttriCount="3">
+                <!--基础附加属性-->
+                <Element Value="1">
+                    <!-- ( 金 ) -->
+                    <Count Value="2"><!-- Count Value = 元素的个数-->
+                        <Attribute ID ="1631"/>
+                        <Attribute ID ="1632"/>
+                        <Attribute ID ="1633"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1634"/>
+                        <Attribute ID ="1635"/>
+                        <Attribute ID ="1636"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1637"/>
+                        <Attribute ID ="1638"/>
+                        <Attribute ID ="1639"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1640"/>
+                        <Attribute ID ="1641"/>
+                        <Attribute ID ="1642"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1643"/>
+                        <Attribute ID ="1644"/>
+                        <Attribute ID ="1645"/>
+                    </Count>
+                </Element>
+                <Element Value="2">
+                    <!-- ( 木 )-->
+                    <Count Value="2">
+                        <Attribute ID ="1661"/>
+                        <Attribute ID ="1662"/>
+                        <Attribute ID ="1663"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1664"/>
+                        <Attribute ID ="1665"/>
+                        <Attribute ID ="1666"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1667"/>
+                        <Attribute ID ="1668"/>
+                        <Attribute ID ="1669"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1670"/>
+                        <Attribute ID ="1671"/>
+                        <Attribute ID ="1672"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1673"/>
+                        <Attribute ID ="1674"/>
+                        <Attribute ID ="1675"/>
+                    </Count>
+                </Element>
+                <Element Value="3">
+                    <!-- ( 水 )-->
+                    <Count Value="2">
+                        <Attribute ID ="1646"/>
+                        <Attribute ID ="1647"/>
+                        <Attribute ID ="1648"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1649"/>
+                        <Attribute ID ="1650"/>
+                        <Attribute ID ="1651"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1652"/>
+                        <Attribute ID ="1653"/>
+                        <Attribute ID ="1654"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1655"/>
+                        <Attribute ID ="1656"/>
+                        <Attribute ID ="1657"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1658"/>
+                        <Attribute ID ="1659"/>
+                        <Attribute ID ="1660"/>
+                    </Count>
+                </Element>
+                <Element Value="4">
+                    <!-- ( 火 )-->
+                    <Count Value="2">
+                        <Attribute ID ="1676"/>
+                        <Attribute ID ="1677"/>
+                        <Attribute ID ="1678"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1679"/>
+                        <Attribute ID ="1680"/>
+                        <Attribute ID ="1681"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1682"/>
+                        <Attribute ID ="1683"/>
+                        <Attribute ID ="1684"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1685"/>
+                        <Attribute ID ="1686"/>
+                        <Attribute ID ="1687"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1688"/>
+                        <Attribute ID ="1689"/>
+                        <Attribute ID ="1690"/>
+                    </Count>
+                </Element>
+                <Element Value="5">
+                    <!-- ( 土 )-->
+                    <Count Value="2">
+                        <Attribute ID ="1691"/>
+                        <Attribute ID ="1692"/>
+                        <Attribute ID ="1693"/>
+                    </Count>
+                    <Count Value="3">
+                        <Attribute ID ="1694"/>
+                        <Attribute ID ="1695"/>
+                        <Attribute ID ="1696"/>
+                    </Count>
+                    <Count Value="4">
+                        <Attribute ID ="1697"/>
+                        <Attribute ID ="1698"/>
+                        <Attribute ID ="1699"/>
+                    </Count>
+                    <Count Value="5">
+                        <Attribute ID ="1700"/>
+                        <Attribute ID ="1701"/>
+                        <Attribute ID ="1702"/>
+                    </Count>
+                    <Count Value="6">
+                        <Attribute ID ="1703"/>
+                        <Attribute ID ="1704"/>
+                        <Attribute ID ="1705"/>
+                    </Count>
+                </Element>
+            </BaseAttribute>
+        </Equip>
+    </ElementAttribute>
+</Project>
